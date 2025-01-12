@@ -37,11 +37,23 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 #### 🔑 Autenticação
 **POST** `/auth/login`  
 **Descrição:** Faz login e retorna um token JWT válido.  
-**Exemplo de Body:**
+**Exemplo de body:**
 ```json
 {
   "email": "usuario@exemplo.com",
   "senha": "senha123"
 }
 ```
+**Resposta de sucesso:**
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+## 📝 Sobre o Projeto
+
+Este backend foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento de **APIs RESTful**, utilizando boas práticas de segurança e organização de código. O foco foi criar uma aplicação limpa, funcional e escalável.
+
+Sinta-se à vontade para explorar o repositório, contribuir e deixar feedback! 
 
