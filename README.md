@@ -91,6 +91,12 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   **Requer autenticação:** Não.  
   **Corpo da requisição:** Objeto `UsuarioCadastroDTO`.
 
+## 🔑 Segurança
+Todos os endpoints protegidos requerem o envio do cabeçalho Authorization com o token JWT no formato:
+
+```
+Authorization: Bearer {seu_token_jwt}
+```
 
 ## 📝 Sobre o Projeto
 
