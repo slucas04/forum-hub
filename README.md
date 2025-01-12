@@ -34,22 +34,63 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ### Endpoints Disponíveis
 
-#### 🔑 Autenticação
-**POST** `/auth/login`  
-**Descrição:** Faz login e retorna um token JWT válido.  
-**Exemplo de body:**
-```json
-{
-  "email": "usuario@exemplo.com",
-  "senha": "senha123"
-}
-```
-**Resposta de sucesso:**
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-}
-```
+### 🛠 **Rotas de Respostas**
+- **POST** `/respostas/{id}`  
+  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.  
+  **Requer autenticação:** Sim.  
+  **Corpo da requisição:** Objeto `RespostaDTO` válido.
+
+- **GET** `/respostas/{id}`  
+  **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.  
+  **Requer autenticação:** Não.
+
+- **PUT** `/respostas/{id}`  
+  **Descrição:** Atualiza uma resposta específica (ID) caso o autor seja o mesmo do token.  
+  **Requer autenticação:** Sim.  
+  **Corpo da requisição:** Objeto `RespostaAtualizadaDTO`.
+
+- **DELETE** `/respostas/{id}`  
+  **Descrição:** Remove uma resposta específica (ID) caso o autor seja o mesmo do token.  
+  **Requer autenticação:** Sim.
+
+---
+
+### 📝 **Rotas de Tópicos**
+- **POST** `/topicos`  
+  **Descrição:** Cria um novo tópico com base no título, mensagem e curso informados.  
+  **Requer autenticação:** Sim.  
+  **Corpo da requisição:** Objeto `TopicoPostagemDTO`.
+
+- **GET** `/topicos`  
+  **Descrição:** Lista todos os tópicos disponíveis no fórum.  
+  **Requer autenticação:** Não.
+
+- **GET** `/topicos/{id}`  
+  **Descrição:** Exibe os detalhes de um tópico específico pelo ID informado.  
+  **Requer autenticação:** Não.
+
+- **PUT** `/topicos/{id}`  
+  **Descrição:** Atualiza um tópico específico (ID) caso o autor seja o mesmo do token.  
+  **Requer autenticação:** Sim.  
+  **Corpo da requisição:** Objeto `TopicoAtualizadoDTO`.
+
+- **DELETE** `/topicos/{id}`  
+  **Descrição:** Remove um tópico específico (ID) caso o autor seja o mesmo do token.  
+  **Requer autenticação:** Sim.
+
+---
+
+### 🔒 **Rotas de Usuários**
+- **POST** `/usuarios/login`  
+  **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT.  
+  **Requer autenticação:** Não.  
+  **Corpo da requisição:** Objeto `UsuarioLoginDTO`.
+
+- **POST** `/usuarios/cadastro`  
+  **Descrição:** Realiza o cadastro de um novo usuário no sistema, criptografando a senha.  
+  **Requer autenticação:** Não.  
+  **Corpo da requisição:** Objeto `UsuarioCadastroDTO`.
+
 
 ## 📝 Sobre o Projeto
 
