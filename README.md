@@ -18,11 +18,11 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ## 🚀 Principais funcionalidades
 
-1. **Autenticação e Autorização:**
+1. **Autenticação e autorização:**
    - A API utiliza autenticação baseada em JWT.
    - Apenas usuários autenticados podem acessar as rotas protegidas.
 
-2. **CRUD de Discussões e Respostas:**
+2. **CRUD de tópicos e respostas:**
    - Endpoints para criar, listar, atualizar e deletar tópicos e respostas no fórum.
 
 3. **Validações:**
