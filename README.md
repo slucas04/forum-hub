@@ -34,24 +34,16 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ### Endpoints Disponíveis
 
-### 🛠 **Rotas de Respostas**
-- **POST** `/respostas/{id}`  
-  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.  
-  **Requer autenticação:** Sim.  
-  **Corpo da requisição:** Objeto `RespostaDTO` válido.
+### 🔒 **Rotas de Usuários**
+- **POST** `/usuarios/login`  
+  **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT.  
+  **Requer autenticação:** Não.  
+  **Corpo da requisição:** Objeto `UsuarioLoginDTO`.
 
-- **GET** `/respostas/{id}`  
-  **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.  
-  **Requer autenticação:** Não.
-
-- **PUT** `/respostas/{id}`  
-  **Descrição:** Atualiza uma resposta específica (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.  
-  **Corpo da requisição:** Objeto `RespostaAtualizadaDTO`.
-
-- **DELETE** `/respostas/{id}`  
-  **Descrição:** Remove uma resposta específica (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.
+- **POST** `/usuarios/cadastro`  
+  **Descrição:** Realiza o cadastro de um novo usuário no sistema, criptografando a senha.  
+  **Requer autenticação:** Não.  
+  **Corpo da requisição:** Objeto `UsuarioCadastroDTO`.
 
 ---
 
@@ -80,16 +72,24 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ---
 
-### 🔒 **Rotas de Usuários**
-- **POST** `/usuarios/login`  
-  **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT.  
-  **Requer autenticação:** Não.  
-  **Corpo da requisição:** Objeto `UsuarioLoginDTO`.
+### 🛠 **Rotas de Respostas**
+- **POST** `/respostas/{id}`  
+  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.  
+  **Requer autenticação:** Sim.  
+  **Corpo da requisição:** Objeto `RespostaDTO` válido.
 
-- **POST** `/usuarios/cadastro`  
-  **Descrição:** Realiza o cadastro de um novo usuário no sistema, criptografando a senha.  
-  **Requer autenticação:** Não.  
-  **Corpo da requisição:** Objeto `UsuarioCadastroDTO`.
+- **GET** `/respostas/{id}`  
+  **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.  
+  **Requer autenticação:** Não.
+
+- **PUT** `/respostas/{id}`  
+  **Descrição:** Atualiza uma resposta específica (ID) caso o autor seja o mesmo do token.  
+  **Requer autenticação:** Sim.  
+  **Corpo da requisição:** Objeto `RespostaAtualizadaDTO`.
+
+- **DELETE** `/respostas/{id}`  
+  **Descrição:** Remove uma resposta específica (ID) caso o autor seja o mesmo do token.  
+  **Requer autenticação:** Sim.
 
 ## 🔑 Segurança
 Todos os endpoints protegidos requerem o envio do cabeçalho Authorization com o token JWT no formato:
