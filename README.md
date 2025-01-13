@@ -52,8 +52,8 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   **Corpo da requisição:**
   ```json
   {
-  	"email": "usuario@email.com",
-  	"senha": "12345678"
+	"email": "usuario@email.com",
+	"senha": "12345678"
   }
   ```
   **Corpo da resposta:**
@@ -78,8 +78,8 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   ```json
    {
 	"username" : "usuario",
-  	"email": "usuario@email.com",
-  	"senha": "12345678"
+	"email": "usuario@email.com",
+	"senha": "12345678"
   }
   ```
   
@@ -91,24 +91,24 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   **Requer autenticação:** Sim.
   **Corpo da requisição:**
   ```json
-   {
+	{
 	"titulo" : "Título do tópico",
 	"mensagem": "Estou escrevendo sobre minha dúvida...",
 	"curso": "Java e Spring Framework"
-  }
+	}
   ```
   **Corpo da resposta:**
   ```json
-   {
-  	"id" : 1,
+	{
+	"id" : 1,
 	"titulo" : "Título do tópico",
-  	"mensagem": "Estou escrevendo sobre minha dúvida...",
-  	"dataCriacao" : "2025-01-11T21:07:48.5402988",
-  	"autor" : {
+	"mensagem": "Estou escrevendo sobre minha dúvida...",
+	"dataCriacao" : "2025-01-11T21:07:48.5402988",
+	"autor" : {
 		"username" : "usuario"
   	},
-  	"curso": "Java e Spring Framework"
-  }
+	"curso": "Java e Spring Framework"
+	}
   ```
 
 - **GET** `/topicos`  
