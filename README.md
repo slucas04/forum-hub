@@ -49,8 +49,20 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 - **POST** `/usuarios/login`  
   **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT.  
   **Requer autenticação:** Não.  
-  **Corpo da requisição:** Objeto `UsuarioLoginDTO`.
-
+  **Corpo da requisição:**
+  ```json
+  {
+  "email": "usuario@email.com",
+  "senha": "12345678"
+  }
+  ```
+  **Corpo da resposta:**
+  ```json
+  {
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3Mi..."
+  }
+  ```
+  
 - **POST** `/usuarios/cadastro`  
   **Descrição:** Realiza o cadastro de um novo usuário no sistema, criptografando a senha.  
   **Requer autenticação:** Não.  
