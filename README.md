@@ -157,13 +157,27 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **PUT** `/topicos/{id}`  
   **Descrição:** Atualiza um tópico específico (ID) caso o autor seja o mesmo do token.  
-  **Corpo da resposta:**
+  **Corpo da requisição:**
   ```json
 	{
 	"titulo" : "Título do tópico editado",
 	"mensagem": "Mensagem editada",
 	}
   ```
+    **Corpo da resposta:**
+  ```json
+	{
+	"id" : 1,
+	"titulo" : "Título do tópico editado",
+	"mensagem": "Mensagem editada",
+	"dataCriacao" : "2025-01-11T21:07:48.5402988",
+	"autor" : {
+		"username" : "usuario"
+  	},
+	"curso": "Java e Spring Framework"
+	}
+  ```
+
 
 - **DELETE** `/topicos/{id}`  
   **Descrição:** Remove um tópico específico (ID) caso o autor seja o mesmo do token.  
