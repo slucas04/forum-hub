@@ -87,8 +87,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ### 📝 **Rotas de tópicos**
 - **POST** `/topicos`  
-  **Descrição:** Cria um novo tópico com base no título, mensagem e curso informados.  
-  **Requer autenticação:** Sim.  
+  **Descrição:** Cria um novo tópico com base no título, mensagem e curso informados.   
   **Corpo da requisição:**
   ```json
 	{
@@ -112,8 +111,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   ```
 
 - **GET** `/topicos`  
-  **Descrição:** Lista todos os tópicos disponíveis no fórum.  
-  **Requer autenticação:** Não.  
+  **Descrição:** Lista todos os tópicos disponíveis no fórum.   
   **Corpo da resposta:**
   ```json
 	[
@@ -142,8 +140,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   ```
 
 - **GET** `/topicos/{id}`  
-  **Descrição:** Exibe os detalhes de um tópico específico pelo ID informado.  
-  **Requer autenticação:** Não.  
+  **Descrição:** Exibe os detalhes de um tópico específico pelo ID informado.   
   **Corpo da resposta:**
   ```json
 	{
@@ -160,7 +157,6 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **PUT** `/topicos/{id}`  
   **Descrição:** Atualiza um tópico específico (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.  
   **Corpo da resposta:**
   ```json
 	{
@@ -171,7 +167,6 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **DELETE** `/topicos/{id}`  
   **Descrição:** Remove um tópico específico (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.  
   **Corpo da resposta:**
   ```json
 	Tópico de id 1 deletado.
@@ -181,22 +176,115 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ### 🛠 **Rotas de respostas**
 - **POST** `/respostas/{id}`  
-  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.  
-  **Requer autenticação:** Sim.  
-  **Corpo da requisição:** Objeto `RespostaDTO` válido.
+  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.   
+  **Corpo da requisição:**
+```json
+	{
+	"mensagem" : "Respondendo meu próprio tópico..."
+	}
+```
+  **Corpo da resposta:**
+```json
+	{
+	"id": 1,
+	"mensagem": "Respondendo meu próprio tópico...",
+	"data": "2025-01-11T23:51:30.3373134",
+	"autor": {
+		"username": "usuario"
+		},
+	"topico": {
+		"id": 1,
+		"titulo": "Título do tópico",
+		"mensagem": "Estou escrevendo sobre minha dúvida...",
+		"dataCriacao": "2025-01-11T16:38:15",
+		"autor": {
+			"username": "usuario"
+			},
+		"curso": "Java e Spring Framework"
+		}
+	}
+```
 
 - **GET** `/respostas/{id}`  
-  **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.  
-  **Requer autenticação:** Não.
+  **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.
+  **Corpo da resposta:**
+```json
+	[
+		{
+		"id": 1,
+		"mensagem": "Respondendo meu próprio tópico...",
+		"data": "2025-01-11T23:51:30.3373134",
+		"autor": {
+			"username": "usuario"
+			},
+		"topico": {
+			"id": 1,
+			"titulo": "Título do tópico",
+			"mensagem": "Estou escrevendo sobre minha dúvida...",
+			"dataCriacao": "2025-01-11T16:38:15",
+			"autor": {
+				"username": "usuario"
+				},
+			"curso": "Java e Spring Framework"
+			}
+		},
+		{
+		"id": 2,
+		"mensagem": "Respondendo meu próprio tópico de novo...",
+		"data": "2025-01-11T23:54:30.3373134",
+		"autor": {
+			"username": "usuario"
+			},
+		"topico": {
+			"id": 1,
+			"titulo": "Título do tópico",
+			"mensagem": "Estou escrevendo sobre minha dúvida...",
+			"dataCriacao": "2025-01-11T16:38:15",
+			"autor": {
+				"username": "usuario"
+				},
+			"curso": "Java e Spring Framework"
+			}
+		}
+	]
+```
 
 - **PUT** `/respostas/{id}`  
   **Descrição:** Atualiza uma resposta específica (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.  
-  **Corpo da requisição:** Objeto `RespostaAtualizadaDTO`.
+  **Corpo da requisição:** 
+```json
+	{
+		"mensagem" : "Atualizando minha resposta..."
+	}
+```
+  **Corpo da resposta:** 
+```json
+	{
+	"id": 1,
+	"mensagem": "Atualizando minha resposta...",
+	"data": "2025-01-11T23:51:30.3373134",
+	"autor": {
+		"username": "usuario"
+		},
+	"topico": {
+		"id": 1,
+		"titulo": "Título do tópico",
+		"mensagem": "Estou escrevendo sobre minha dúvida...",
+		"dataCriacao": "2025-01-11T16:38:15",
+		"autor": {
+			"username": "usuario"
+			},
+		"curso": "Java e Spring Framework"
+		}
+	}
+```
 
 - **DELETE** `/respostas/{id}`  
-  **Descrição:** Remove uma resposta específica (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.
+  **Descrição:** Remove uma resposta específica (ID) caso o autor seja o mesmo do token.
+    **Corpo da resposta:**
+  ```json
+	Resposta de id 1 deletada.
+  ```
 
 ## 🔑 Segurança
 Todos os endpoints protegidos requerem o envio do cabeçalho Authorization com o token JWT no formato:
