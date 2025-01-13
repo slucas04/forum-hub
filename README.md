@@ -254,7 +254,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   **Corpo da requisição:** 
 ```json
 	{
-		"mensagem" : "Atualizando minha resposta..."
+	"mensagem" : "Atualizando minha resposta..."
 	}
 ```
   **Corpo da resposta:** 
