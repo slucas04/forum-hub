@@ -197,8 +197,8 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
     "mensagem" : "Respondendo meu próprio tópico..."
   }
   ```
-**Corpo da resposta:**
-```json
+  **Corpo da resposta:**
+  ```json
 	{
 	"id": 1,
 	"mensagem": "Respondendo meu próprio tópico...",
@@ -217,7 +217,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 		"curso": "Java e Spring Framework"
 		}
 	}
-```
+  ```
 
 - **GET** `/respostas/{id}`  
   **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.
