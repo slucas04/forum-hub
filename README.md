@@ -47,13 +47,13 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ### 🔒 **Rotas de usuários**
 - **POST** `/usuarios/login`  
-  **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT.  
+  **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT que deve ser usado como Bearer Token nas requisições que precisam de autenticação.  
   **Requer autenticação:** Não.  
   **Corpo da requisição:**
   ```json
   {
-  "email": "usuario@email.com",
-  "senha": "12345678"
+  	"email": "usuario@email.com",
+  	"senha": "12345678"
   }
   ```
   **Corpo da resposta:**
@@ -66,15 +66,50 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 - **POST** `/usuarios/cadastro`  
   **Descrição:** Realiza o cadastro de um novo usuário no sistema, criptografando a senha.  
   **Requer autenticação:** Não.  
-  **Corpo da requisição:** Objeto `UsuarioCadastroDTO`.
-
+  **Corpo da requisição:**
+  ```json
+   {
+	"username" : "usuario",
+  	"email": "usuario@email.com",
+  	"senha": "12345678"
+  }
+  ```
+  **Corpo da resposta:**
+  ```json
+   {
+	"username" : "usuario",
+  	"email": "usuario@email.com",
+  	"senha": "12345678"
+  }
+  ```
+  
 ---
 
 ### 📝 **Rotas de tópicos**
 - **POST** `/topicos`  
   **Descrição:** Cria um novo tópico com base no título, mensagem e curso informados.  
-  **Requer autenticação:** Sim.  
-  **Corpo da requisição:** Objeto `TopicoPostagemDTO`.
+  **Requer autenticação:** Sim.
+  **Corpo da requisição:**
+  ```json
+   {
+	"titulo" : "Título do tópico",
+  	"mensagem": "Estou escrevendo sobre minha dúvida...",
+  	"curso": "Java e Spring Framework"
+  }
+  ```
+  **Corpo da resposta:**
+  ```json
+   {
+  	"id" : 1,
+	"titulo" : "Título do tópico",
+  	"mensagem": "Estou escrevendo sobre minha dúvida...",
+  	"dataCriacao" : "2025-01-11T21:07:48.5402988",
+  	"autor" : {
+		"username" : "usuario"
+  	},
+  	"curso": "Java e Spring Framework"
+  }
+  ```
 
 - **GET** `/topicos`  
   **Descrição:** Lista todos os tópicos disponíveis no fórum.  
