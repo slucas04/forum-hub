@@ -222,7 +222,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 - **GET** `/respostas/{id}`  
   **Descrição:** Lista todas as respostas relacionadas ao tópico especificado pelo ID.
   **Corpo da resposta:**
-```json
+  ```json
 	[
 		{
 		"id": 1,
@@ -261,7 +261,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 			}
 		}
 	]
-```
+  ```
 
 - **PUT** `/respostas/{id}`  
   **Descrição:** Atualiza uma resposta específica (ID) caso o autor seja o mesmo do token.  
