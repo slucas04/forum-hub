@@ -51,16 +51,16 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   **Requer autenticação:** Não.  
   **Corpo da requisição:**
   ```json
-  {
+	{
 	"email": "usuario@email.com",
 	"senha": "12345678"
-  }
+	}
   ```
   **Corpo da resposta:**
   ```json
-  {
+	{
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3Mi..."
-  }
+	}
   ```
   
 - **POST** `/usuarios/cadastro`  
@@ -68,19 +68,19 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   **Requer autenticação:** Não.  
   **Corpo da requisição:**
   ```json
-   {
+	{
 	"username" : "usuario",
 	"email": "usuario@email.com",
 	"senha": "12345678"
-  }
+	}
   ```
   **Corpo da resposta:**
   ```json
-   {
+	{
 	"username" : "usuario",
 	"email": "usuario@email.com",
 	"senha": "12345678"
-  }
+	}
   ```
   
 ---
