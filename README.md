@@ -265,14 +265,14 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **PUT** `/respostas/{id}`  
   **Descrição:** Atualiza uma resposta específica (ID) caso o autor seja o mesmo do token.  
-  **Corpo da requisição:** 
-```json
+  **Corpo da requisição:**
+  ```json
 	{
 	"mensagem" : "Atualizando minha resposta..."
 	}
-```
-  **Corpo da resposta:** 
-```json
+  ```
+  **Corpo da resposta:**
+  ```json
 	{
 	"id": 1,
 	"mensagem": "Atualizando minha resposta...",
@@ -291,11 +291,11 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 		"curso": "Java e Spring Framework"
 		}
 	}
-```
+  ```
 
 - **DELETE** `/respostas/{id}`  
   **Descrição:** Remove uma resposta específica (ID) caso o autor seja o mesmo do token.
-    **Corpo da resposta:**
+  **Corpo da resposta:**
   ```json
 	Resposta de id 1 deletada.
   ```
