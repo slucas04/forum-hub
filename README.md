@@ -1,3 +1,14 @@
+<div align="center">
+  <a href="https://www.oracle.com/br/education/oracle-next-education/">
+    <img src="https://img.shields.io/badge/challenge-oracle%20next%20education-blue" alt="Challenge Oracle Next Education">
+  </a>
+</div>
+<div align="center">
+    <img src="https://img.shields.io/badge/finished-january-green" alt="Finished in January">
+</div>
+
+---
+
 # ForumHub - API de Simulação de Fórum 🗣️💻
 
 Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o poderoso **Spring Framework**! Este projeto foi criado como uma simulação de um fórum de discussões para alunos da **Alura**, focando em boas práticas de desenvolvimento backend, autenticação JWT e persistência de dados com banco de dados relacional.
