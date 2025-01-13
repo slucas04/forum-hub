@@ -4,7 +4,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ---
 
-## 🛠️ Tecnologias e Dependências Utilizadas
+## 🛠️ Tecnologias e dependências utilizadas
 
 - **Java 17**: Linguagem principal do projeto.
 - **Spring Boot 3.4.1**: Framework para facilitar o desenvolvimento backend.
@@ -16,7 +16,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ---
 
-## 🚀 Funcionalidades Principais
+## 🚀 Principais funcionalidades
 
 1. **Autenticação e Autorização:**
    - A API utiliza autenticação baseada em JWT.
@@ -30,11 +30,11 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ---
 
-## 📚 Como Usar a API
+## 📚 Como usar a API
 
-### Endpoints Disponíveis
+### Endpoints disponíveis
 
-### 🔒 **Rotas de Usuários**
+### 🔒 **Rotas de usuários**
 - **POST** `/usuarios/login`  
   **Descrição:** Autentica um usuário com e-mail e senha, retornando um token JWT.  
   **Requer autenticação:** Não.  
@@ -47,7 +47,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ---
 
-### 📝 **Rotas de Tópicos**
+### 📝 **Rotas de tópicos**
 - **POST** `/topicos`  
   **Descrição:** Cria um novo tópico com base no título, mensagem e curso informados.  
   **Requer autenticação:** Sim.  
@@ -72,7 +72,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ---
 
-### 🛠 **Rotas de Respostas**
+### 🛠 **Rotas de respostas**
 - **POST** `/respostas/{id}`  
   **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.  
   **Requer autenticação:** Sim.  
@@ -98,9 +98,9 @@ Todos os endpoints protegidos requerem o envio do cabeçalho Authorization com o
 Authorization: Bearer {seu_token_jwt}
 ```
 
-## 📝 Sobre o Projeto
+## 📝 Sobre o projeto
 
-Este backend foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento de **APIs RESTful**, utilizando boas práticas de segurança e organização de código. O foco foi criar uma aplicação limpa, funcional e escalável.
+Este backend foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento de **APIs RESTful**, utilizando boas práticas de segurança e organização de código, e faz parte do challenge de conclusão da formação **Java e Spring Framework** da **Oracle Next Education**. O foco foi criar uma aplicação limpa, funcional e escalável.
 
 Sinta-se à vontade para explorar o repositório, contribuir e deixar feedback! 
 
