@@ -114,19 +114,68 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 - **GET** `/topicos`  
   **Descrição:** Lista todos os tópicos disponíveis no fórum.  
   **Requer autenticação:** Não.
+  **Corpo da resposta:**
+  ```json
+	[
+		{
+		"id" : 1,
+		"titulo" : "Título do tópico",
+		"mensagem": "Estou escrevendo sobre minha dúvida...",
+		"dataCriacao" : "2025-01-11T21:07:48.5402988",
+		"autor" : {
+			"username" : "usuario"
+	  	},
+		"curso": "Java e Spring Framework"
+		},
+		{
+		"id" : 2,
+		"titulo" : "Título do segundo tópico",
+		"mensagem": "Estou escrevendo sobre minha segunda dúvida...",
+		"dataCriacao" : "2025-01-11T22:07:48.5402988",
+		"autor" : {
+			"username" : "usuario"
+	  	},
+		"curso": "Java e Spring Framework"
+		}
+  
+	]
+  ```
 
 - **GET** `/topicos/{id}`  
   **Descrição:** Exibe os detalhes de um tópico específico pelo ID informado.  
   **Requer autenticação:** Não.
+  **Corpo da resposta:**
+  ```json
+	{
+	"id" : 1,
+	"titulo" : "Título do tópico",
+	"mensagem": "Estou escrevendo sobre minha dúvida...",
+	"dataCriacao" : "2025-01-11T21:07:48.5402988",
+	"autor" : {
+		"username" : "usuario"
+  	},
+	"curso": "Java e Spring Framework"
+	}
+  ```
 
 - **PUT** `/topicos/{id}`  
   **Descrição:** Atualiza um tópico específico (ID) caso o autor seja o mesmo do token.  
   **Requer autenticação:** Sim.  
-  **Corpo da requisição:** Objeto `TopicoAtualizadoDTO`.
+  **Corpo da requisição:**
+  ```json
+	{
+	"titulo" : "Título do tópico editado",
+	"mensagem": "Mensagem editada",
+	}
+  ```
 
 - **DELETE** `/topicos/{id}`  
   **Descrição:** Remove um tópico específico (ID) caso o autor seja o mesmo do token.  
   **Requer autenticação:** Sim.
+  **Corpo da resposta:**
+  ```json
+	Tópico de id 1 deletado.
+  ```
 
 ---
 
