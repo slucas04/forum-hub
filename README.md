@@ -88,7 +88,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 ### 📝 **Rotas de tópicos**
 - **POST** `/topicos`  
   **Descrição:** Cria um novo tópico com base no título, mensagem e curso informados.  
-  **Requer autenticação:** Sim.
+  **Requer autenticação:** Sim.  
   **Corpo da requisição:**
   ```json
 	{
