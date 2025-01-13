@@ -70,8 +70,8 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   ```json
    {
 	"username" : "usuario",
-  	"email": "usuario@email.com",
-  	"senha": "12345678"
+	"email": "usuario@email.com",
+	"senha": "12345678"
   }
   ```
   **Corpo da resposta:**
@@ -93,8 +93,8 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
   ```json
    {
 	"titulo" : "Título do tópico",
-  	"mensagem": "Estou escrevendo sobre minha dúvida...",
-  	"curso": "Java e Spring Framework"
+	"mensagem": "Estou escrevendo sobre minha dúvida...",
+	"curso": "Java e Spring Framework"
   }
   ```
   **Corpo da resposta:**
