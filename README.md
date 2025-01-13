@@ -113,7 +113,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **GET** `/topicos`  
   **Descrição:** Lista todos os tópicos disponíveis no fórum.  
-  **Requer autenticação:** Não.
+  **Requer autenticação:** Não.  
   **Corpo da resposta:**
   ```json
 	[
@@ -143,7 +143,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **GET** `/topicos/{id}`  
   **Descrição:** Exibe os detalhes de um tópico específico pelo ID informado.  
-  **Requer autenticação:** Não.
+  **Requer autenticação:** Não.  
   **Corpo da resposta:**
   ```json
 	{
@@ -161,7 +161,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 - **PUT** `/topicos/{id}`  
   **Descrição:** Atualiza um tópico específico (ID) caso o autor seja o mesmo do token.  
   **Requer autenticação:** Sim.  
-  **Corpo da requisição:**
+  **Corpo da resposta:**
   ```json
 	{
 	"titulo" : "Título do tópico editado",
@@ -171,7 +171,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 - **DELETE** `/topicos/{id}`  
   **Descrição:** Remove um tópico específico (ID) caso o autor seja o mesmo do token.  
-  **Requer autenticação:** Sim.
+  **Requer autenticação:** Sim.  
   **Corpo da resposta:**
   ```json
 	Tópico de id 1 deletado.
