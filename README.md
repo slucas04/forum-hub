@@ -164,7 +164,7 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 	"mensagem": "Mensagem editada",
 	}
   ```
-    **Corpo da resposta:**
+  **Corpo da resposta:**
   ```json
 	{
 	"id" : 1,
@@ -190,14 +190,14 @@ Seja bem-vindo(a) ao **ForumHub**, uma API desenvolvida em **Java** utilizando o
 
 ### 🛠 **Rotas de respostas**
 - **POST** `/respostas/{id}`  
-  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.   
-  **Corpo da requisição:**
-```json
-	{
-	"mensagem" : "Respondendo meu próprio tópico..."
-	}
-```
-  **Corpo da resposta:**
+  **Descrição:** Adiciona uma nova resposta ao tópico especificado pelo ID.  
+  **Corpo da requisição:**  
+  ```json
+  {
+    "mensagem" : "Respondendo meu próprio tópico..."
+  }
+  ```
+**Corpo da resposta:**
 ```json
 	{
 	"id": 1,
